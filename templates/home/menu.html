@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="/">Service</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="container">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Customer
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/customer/add_code">Add code</a></li>
+                            <li><a class="dropdown-item" href="/customer/list">Customer list</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Service
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/service">Service</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="container">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{session["username"]}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/changepassword">change password</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page">{{session["level"]}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/fn_logout">logout</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>

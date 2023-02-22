@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add customer</title>
+    <link rel="stylesheet" href="/static/css/bootstrap_5-2-2.css">
+    <script src="/static/js/bootstrap_5-2-2.js"></script>
+</head>
+
+<body>
+
+    {% include "home/menu.html" %}
+
+    <form action="/customer/add_code/fn_add_customer" method="POST">
+        <div class="container d-flex justify-content-center p-1" style="align-items: center;">
+            <input class="form-control form-control-sm m-2" type="text" placeholder="Add code for customer"
+                aria-label=".form-control-sm example" style="width: 500px;" name="id_code">
+            <button type="submit" class="btn btn-outline-primary"
+                style="height: 31px; margin : 0; padding: 0; padding-left: 8px;padding-right: 8px;">Add code for
+                customer</button>
+        </div>
+    </form>
+
+    <div class="container">
+        <table class="table mt-2">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">ID Code</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Tel</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                    <td>{{row[5]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

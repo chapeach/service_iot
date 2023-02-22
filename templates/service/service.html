@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <link rel="stylesheet" href="/static/css/bootstrap_5-2-2.css">
+    <script src="/static/js/bootstrap_5-2-2.js"></script>
+</head>
+
+<body>
+
+    {% include "home/menu.html" %}
+
+    <div class="container">
+        <table class="table mt-2">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">ID Code</th>
+                    <th scope="col">Service Code</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Service Request Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RETRO-001</td>
+                    <td>SC-001</td>
+                    <td>กนกพร</td>
+                    <td>ทองประเสริฐ</td>
+                    <td>18 Feb 2023</td>
+                    <td>ทีมช่าง : รับงานเรียบร้อย รอเข้าดำเนินการวันพรุ่งนี้</td>
+                    <td>
+                        <a href="/service/SV-001">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>RETRO-004</td>
+                    <td>SC-002</td>
+                    <td>ธมลวรรณ</td>
+                    <td>พรรณงาม</td>
+                    <td>18 Feb 2023</td>
+                    <td>ส่วนกลาง : รับเรื่องเรียบร้อย รอนัดหมายทีมช่าง</td>
+                    <td>
+                        <a href="/service/SV-001">View</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
